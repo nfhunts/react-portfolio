@@ -63,23 +63,23 @@ export default class Login extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <input
-            type="email"
-            name="email"
-            placeholder="Your email"
+            type='email'
+            name='email'
+            placeholder='Your email'
             value={this.state.email}
             onChange={this.handleChange}
           />
 
           <input
-            type="password"
-            name="password"
-            placeholder="Your password"
+            type='password'
+            name='password'
+            placeholder='Your password'
             value={this.state.password}
             onChange={this.handleChange}
           />
 
           <div>
-            <button type="submit">Login</button>
+            <button type='submit'>Login</button>
           </div>
         </form>
       </div>

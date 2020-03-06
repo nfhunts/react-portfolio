@@ -38,7 +38,7 @@ export default class App extends Component {
 
   handleSuccessfulLogout() {
     this.setState({
-      loggedInStatus: "LOGGED_IN"
+      loggedInStatus: "NOT_LOGGED_IN"
     });
   }
 
@@ -83,7 +83,7 @@ export default class App extends Component {
           <div>
             <NavigationContainer
               loggedInStatus={this.state.loggedInStatus}
-              handleSuccessfulLogout={this.state.handleSuccessfulLogout}
+              handleSuccessfulLogout={this.handleSuccessfulLogout}
             />
 
             <h2>{this.state.loggedInStatus}</h2>
