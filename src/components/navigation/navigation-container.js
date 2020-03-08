@@ -62,7 +62,7 @@ const NavigationComponent = props => {
       </div>
 
       <div className='right-side'>
-        JORDAN HUDGENS
+        NATE HUNTSMAN
         {props.loggedInStatus === "LOGGED_IN" ? (
           <a onClick={handleSignOut}>Sign Out</a>
         ) : null}
