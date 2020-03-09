@@ -19,6 +19,13 @@ export default class PortfolioManager extends Component {
     this.handleFormSubmissionError = this.handleFormSubmissionError.bind(this);
     this.handleDeleteClick = this.handleDeleteClick.bind(this);
     this.handleEditClick = this.handleEditClick.bind(this);
+    this.clearPortfolioToEdit = this.clearPortfolioToEdit.bind(this);
+  }
+
+  clearPortfolioToEdit() {
+    this.setState({
+      portfolioToEdit: {}
+    });
   }
 
   handleEditClick(portfolioItem) {
@@ -60,7 +67,7 @@ export default class PortfolioManager extends Component {
   getPortfolioItems() {
     axios
       .get(
-        "https://jordan.devcamp.space/portfolio/portfolio_items?order_by=created_at&direction=desc",
+        "https://nfhunts.devcamp.space/portfolio/portfolio_items?order_by=created_at&direction=desc",
         {
           withCredentials: true
         }
@@ -86,6 +93,8 @@ export default class PortfolioManager extends Component {
           <PortfolioForm
             handleSuccessfulFormSubmission={this.handleSuccessfulFormSubmission}
             handleFormSubmissionError={this.handleFormSubmissionError}
+            clearPortfolioToEdit={this.clearPortfolioToEdit}
+            portfolioToEdit={this.state.portfolioToEdit}
           />
         </div>
 
