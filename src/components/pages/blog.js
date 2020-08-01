@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import blogItem from "../blog/blog-item";
 import BlogItem from "../blog/blog-item";
 
 class Blog extends Component {
@@ -16,7 +17,7 @@ class Blog extends Component {
 
   getBlogItems() {
     axios
-      .get("https://jordan.devcamp.space/portfolio/portfolio_blogs", {
+      .get("https://nfhunts.devcamp.space/portfolio/portfolio_blogs", {
         withCredentials: true
       })
       .then(response => {
